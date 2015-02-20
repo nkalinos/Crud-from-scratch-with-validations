@@ -1,8 +1,8 @@
 <h1>Editing Status</h1>
 
-
 <ol class="breadcrumb">
   <li><a href="/statuses">Statuses</a></li>
   <li> <%= link_to @status.message, status_path(@status) %></li>
   <li class="active"><%= @status.message %></li>
 </ol>
+<%= render 'form' %>

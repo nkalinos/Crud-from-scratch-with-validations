@@ -31,9 +31,20 @@ class StatusesController < ApplicationController
   end
 
   def destroy
-    @status = Status.destroy(params[:id])
+    @status = Status.find(params[:id])
+   if @status.destroy
+     redirect_to root_path, notice: 'Status successfully deleted.'
     end
+  end
 
+  def update
+    @status = Status.find(params[:id])
+      if @status.update(status_params)
+          redirect_to root_path, notice: 'Status was successfully updated.'
+        else
+          render :edit
+      end
+  end
 
   private
   def set_status

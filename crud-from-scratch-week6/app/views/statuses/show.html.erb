@@ -2,6 +2,8 @@
 <div class="page-header">
   <div class="pull-right">
     <a class="btn btn-info" href="/statuses/<%= @status.id %>/edit">Edit</a>
+    <%= link_to 'Delete', @status, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+
   </div>
   <h1> <%= @status.message %></h1>
 </div>
