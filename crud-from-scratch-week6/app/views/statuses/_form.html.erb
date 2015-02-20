@@ -1,0 +1,35 @@
+<%= form_for(@status, html: {class:"form-horizontal"}) do |f| %>
+
+
+<div class="form-group">
+  <div class="field">
+    <div class="control-label col-md-2">
+      <%= f.label :message %>
+    </div>
+  </div>
+  <div class="control-label col-md-2">
+    <%= f.text_field :message %>
+  </div>
+</div>
+
+<div class="form-group">
+  <div class="field">
+    <div class="control-label col-md-2">
+      <%= f.label :user %>
+    </div>
+  </div>
+  <div class="control-label col-md-2">
+    <%= f.text_field :user %>
+  </div>
+</div>
+
+
+<div class="form-group">
+  <div class="col-md-4 col-md-offset-2">
+    <div class="action">
+      <%= f.submit class: "btn btn-primary btn-md active" %>
+      <%= f.button link_to('Cancel', root_path), class: "btn btn-default btn-md active" %>
+    </div>
+  </div>
+</div>
+<% end %>

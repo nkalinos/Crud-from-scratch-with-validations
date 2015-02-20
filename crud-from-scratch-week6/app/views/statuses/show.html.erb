@@ -1,0 +1,15 @@
+
+<div class="page-header">
+  <div class="pull-right">
+    <a class="btn btn-info" href="/statuses/<%= @status.id %>/edit">Edit</a>
+  </div>
+  <h1> <%= @status.message %></h1>
+</div>
+
+<p>
+  <ol class="breadcrumb">
+    <li><a href="/statuses">Statuses</a></li>
+    <li class="active"><%= @status.message %></li>
+  </ol>
+
+</p>
