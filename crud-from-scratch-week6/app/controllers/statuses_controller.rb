@@ -46,6 +46,12 @@ class StatusesController < ApplicationController
       end
   end
 
+  def upvote
+    @status = Status.find(params[:id])
+    @status.likes.create
+    redirect_to root_path
+  end
+
   private
   def set_status
     @status = Status.find(params[:id])
